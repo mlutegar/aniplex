@@ -1,0 +1,30 @@
+#rect{
+    margin: 100px auto;
+    margin-bottom: 200px;
+    width: 90%;
+    border-radius: 0px 8px 8px 8px;
+    background-color: #838383;;
+}
+
+#information-rect{
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    display: flexbox;
+    padding: 20px 30px;
+    text-align: justify;
+    margin:  auto;
+    width: fit-content;
+}
+
+.submit-btn{
+    background-color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    color: #24252a;
+    font-size: 25px;
+    border: none;
+    display: flex;
+    padding: 5px 10px;
+    margin: 20px auto;
+    width: auto !important;
+    height: auto !important;
+}

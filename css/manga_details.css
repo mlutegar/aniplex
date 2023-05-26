@@ -1,0 +1,12 @@
+.cropped-detail{
+    width: 550px; 
+    height: 800px; 
+    object-fit: cover;
+    border: 4px solid black;
+}
+
+#manga-cover{
+    width: 90%;
+    background-position: center;
+    background-size: cover;
+}

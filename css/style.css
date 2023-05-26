@@ -1,0 +1,122 @@
+body{
+    width:100%;
+    background-color: #696969;
+    color: white
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+h1{
+  color: white;
+}
+
+.banner{
+  background-image: url(../img/wallpapper.jpg);
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  border: 2px solid black
+}
+  
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+
+  @media only screen and (max-width: 740px) {
+    .banner{
+      background-image: url(../img/wallpapper_phone.jpg);
+      height: 200px;
+    }
+    
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  a.logout{
+    transition: color 0.3s ease 0s;
+  }
+  a.logout:hover {
+    color: #0088a9;
+  }
+  a.logout{
+    color: white;
+    text-decoration: none;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .footer{
+    background-color: #d1ebf7;
+    height: 120px;
+    width: 100%;
+    top: 130%;
+    padding: 50px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: #24252a;
+    margin-top: 5%;
+  }
+  
+
+.rect{
+  margin: 5% 20%;
+  text-align: center;
+  color: white;
+}
