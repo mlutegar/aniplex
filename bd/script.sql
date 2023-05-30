@@ -26,6 +26,19 @@ create or replace table manga(
     created_at TIMESTAMP not null default CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
 
+create or replace table filme(
+    id int primary key auto_increment,
+    titulo varchar(250) not null,
+    diretor varchar(250) not null,
+    duracao varchar(250) not null,
+    categoria varchar(250) not null,
+    sumario longtext not null, 
+    capa longtext not null,
+    nota int not null,
+    acesso int not null,
+    created_at TIMESTAMP not null default CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1; 
+
 create or replace table favorite(
     favorite_id int primary key auto_increment, 
     favorite_by int not null, 
