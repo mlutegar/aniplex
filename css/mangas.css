@@ -7,7 +7,7 @@ body{
     width:100%;
     background-color: #24252a;
     overflow-x: hidden;
-    
+
 }
 
 #search-bar{
@@ -155,8 +155,8 @@ margin-left: 20px;
 }
 
 .cropped-vitrine{
-    width: 200px; 
-    height: 280px; 
+    width: 200px;
+    height: 280px;
     object-fit: cover;
     border: 4px solid black;
 }
