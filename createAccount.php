@@ -21,6 +21,6 @@
     }
 
     $page = "login.php";
-    setcookie('notify', $msg, time() + 10, "supermanga/{$page}", 'localhost');
+    setcookie('notify', $msg, time() + 10, "aniplex/{$page}", 'localhost');
     header("location: {$page}");
     exit;

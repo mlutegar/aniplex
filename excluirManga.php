@@ -1,7 +1,7 @@
 <?php
     require_once('repository/MangaRepository.php');
     session_start();
-    
+
     $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
     $manga = fnLocalizaMangaPorId($_SESSION['id']);
     $conteudo = $manga->conteudo;
@@ -16,6 +16,6 @@
     unset($_SESSION['id']);
 
     $page = "admin_list.php";
-    setcookie('notify', $msg, time() + 10, "/supermanga/{$page}", 'localhost');
+    setcookie('notify', $msg, time() + 10, "/aniplex/{$page}", 'localhost');
     header("location: {$page}");
     exit;

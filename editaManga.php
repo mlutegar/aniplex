@@ -1,7 +1,7 @@
 <?php
     require_once('repository/MangaRepository.php');
     require_once('util/base64.php');
-    
+
     $id = filter_input(INPUT_POST, 'idManga', FILTER_SANITIZE_NUMBER_INT);
     $anime = filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS);
     $volume = filter_input(INPUT_POST, 'volume', FILTER_SANITIZE_NUMBER_INT);
@@ -21,6 +21,6 @@
 
     $_SESSION['id'] = $id;
     $page = "formulario-edita-manga.php";
-    setcookie('notify', $msg, time() + 10, "supermanga/{$page}", 'localhost');
-    header("location: {$page}"); 
+    setcookie('notify', $msg, time() + 10, "aniplex/{$page}", 'localhost');
+    header("location: {$page}");
     exit;
