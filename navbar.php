@@ -25,8 +25,18 @@
         <li class="nav-item">
           <a class="nav-link" href="mangas.php">Mangás</a></li>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="categorias.php">Categorias</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+            </a>
+            <div class="dropdown-content">
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="categorias.php">Mangas</a></li>
+                    <li><a class="dropdown-item" href="#">Animes</a></li>
+                    <li><a class="dropdown-item" href="#">Músicas</a></li>
+                    <li><a class="dropdown-item" href="#">Filmes</a></li>
+                </ul>
+            </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="message_us.php">Fale conosco</a></li>
