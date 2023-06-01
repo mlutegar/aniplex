@@ -10,11 +10,6 @@ body{
   padding: 0;
 }
 
-a{
-  text-decoration: none;
-  color: white;
-}
-
 h1{
   color: white;
 }
@@ -26,7 +21,7 @@ h1{
   background-position: center;
   border: 2px solid black
 }
-  
+
 .overlay {
   height: 100%;
   width: 0;
@@ -38,11 +33,11 @@ h1{
   overflow-x: hidden;
   transition: width 0.5s ease 0s;
 }
-  
+
   .overlay--active {
     width: 100%;
   }
-  
+
   .overlay__content {
     display: flex;
     height: 100%;
@@ -50,14 +45,14 @@ h1{
     align-items: center;
     justify-content: center;
   }
-  
+
   .overlay a {
     padding: 15px;
     font-size: 36px;
     display: block;
     transition: color 0.3s ease 0s;
   }
-  
+
   .overlay a:hover,
   .overlay a:focus {
     color: #0088a9;
@@ -75,9 +70,9 @@ h1{
       background-image: url(../img/wallpapper_phone.jpg);
       height: 200px;
     }
-    
+
   }
-  
+
   @media screen and (max-height: 450px) {
     .overlay a {
       font-size: 20px;
@@ -88,7 +83,7 @@ h1{
       right: 35px;
     }
   }
-  
+
   a.logout{
     transition: color 0.3s ease 0s;
   }
@@ -113,7 +108,7 @@ h1{
     color: #24252a;
     margin-top: 5%;
   }
-  
+
 
 .rect{
   margin: 5% 20%;

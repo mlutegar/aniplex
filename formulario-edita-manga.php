@@ -1,4 +1,4 @@
-<?php 
+<?php
     include('configAdmin.php');
     require_once('repository/MangaRepository.php');
     $id = $_SESSION['id'];
@@ -16,6 +16,7 @@
   </head>
 
   <body><?php include("navbar.php");?>
+  
     <div>
         <div id="form-rect">
             <form id="editaManga" action="editaManga.php" method="post" enctype="multipart/form-data">
@@ -23,15 +24,15 @@
               <div style="width: 100%;">
                 <a href="#" onclick="return confirm ('Deseja realmente trocar a capa?') ? trocarImagem() : '';"><img src="<?= $manga->capa ?>" id="manga-cover"></a>
                 <p style="text-align:center"><?= $manga->titulo ?></p>
-              </div>              
-                <input type="hidden" name="idManga" id="mangaId" value="<?= $manga->id ?>"> 
+              </div>
+                <input type="hidden" name="idManga" id="mangaId" value="<?= $manga->id ?>">
 
                 <label>Anime</label>
                 <input type="text" name="anime" id="animeId" value="<?= $manga->anime ?>" required>
 
                 <label>Volume</label>
-                <input type="number" name="volume" id="volumeId" value="<?= $manga->volume ?>" required>          
-      
+                <input type="number" name="volume" id="volumeId" value="<?= $manga->volume ?>" required>
+
                 <label>Categoria</label>
                 <input type="text" name="categoria" id="categoriaId" value="<?= $manga->categoria?>">
 
@@ -45,7 +46,7 @@
           </form>
         </div>
     </div>
-  
+
   <?php include("footer.php");?>
   <script src="js/base64.js"></script></body>
   <script>

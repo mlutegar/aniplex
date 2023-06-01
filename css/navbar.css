@@ -6,23 +6,6 @@ header {
   width: 100%;
 }
 
-.logo {
-  position: relative;
-  left: 0px;
-  bottom: 15px;
-  cursor: pointer;
-}
-
-.logo img{
-  width: 100px;
-  height: 100px;
-}
-
-.iconlogin{
-  position: static;
-  margin-right: 10%;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -175,9 +158,3 @@ header {
   margin-left: 1%;
   margin-top: 9px;
 }
-
-@media only screen and (max-width: 1382px) {}
-
-@media screen and (max-width: 768px) {}
-
-@media only screen and (max-width: 576px) {}
