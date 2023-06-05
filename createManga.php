@@ -1,7 +1,7 @@
 <?php
     require_once('repository/MangaRepository.php');
-    //require_once('util/base64.php');
-    //require_once('util/uploadArquivo.php');
+    require_once('util/base64.php');
+    require_once('util/uploadArquivo.php');
 
     $anime = filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS);
     $volume = filter_input(INPUT_POST, 'volume', FILTER_SANITIZE_NUMBER_INT);
@@ -12,8 +12,8 @@
 
     $titulo = ("{$anime} - Vol.{$volume}");
 
-    $capa = "aaa";//converterBase64($_FILES['capa']);
-    $conteudo = "aaa";//uploadArquivo($_FILES['conteudo']);
+    $capa = converterBase64($_FILES['capa']);
+    $conteudo = uploadArquivo($_FILES['conteudo']);
 
     if(empty($categoria)) {
         $categoria = "Desconhecido";
