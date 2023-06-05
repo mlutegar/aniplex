@@ -67,8 +67,8 @@
     }
 
     function redirect($status, $msg){
-        setcookie('notify', $msg, time() + 10, "supermanga/message_us.php", 'localhost');
-        setcookie('status', $status, time() + 10, "supermanga/message_us.php", 'localhost');
+        setcookie('notify', $msg, time() + 10, "aniplex/message_us.php", 'localhost');
+        setcookie('status', $status, time() + 10, "aniplex/message_us.php", 'localhost');
         header("location: message_us.php");
         exit;
     }

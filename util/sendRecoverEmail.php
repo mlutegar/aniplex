@@ -21,7 +21,7 @@
        $mail->Username = GUSER;
        $mail->Password = GPWD;
 
-       $mail->setFrom('supermanga@gmail.com.br', 'Super Mangá');
+       $mail->setFrom('aniplex@gmail.com.br', 'Aniplex');
        $mail->addAddress($usuario->email); 
        $mail->Subject = 'Recuperação de senha'; 
 
