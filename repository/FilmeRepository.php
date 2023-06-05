@@ -84,7 +84,7 @@
         return $stmt->execute();
     }
 
-    function fnDeleteManga($id){
+    function fnDeleteFilme($id){
         $con = getConnection();
         $sql = "delete from filme where id = :pID";
         
