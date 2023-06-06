@@ -38,7 +38,7 @@
                 <li><a class="dropdown-item" href="categorias.php">Mangas</a></li>
                 <li><a class="dropdown-item" href="#">Animes</a></li>
                 <li><a class="dropdown-item" href="#">Músicas</a></li>
-                <li><a class="dropdown-item" href="#">Filmes</a></li>
+                <li><a class="dropdown-item" href="categorias_filmes.php">Filmes</a></li>
               </ul>
             </div>
           </li>
@@ -58,9 +58,23 @@
             <div class="dropdown-content">
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="logout.php">Logout</a></li>
-                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>" ?>
                 <li><a class="dropdown-item" href="user.php">Página usuario</a></li>
-                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list.php'>Administrador</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list.php'>Administrador Mangas</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_filmes.php'>Administrador Filmes</a></li>" ?>
+              </ul>
+            </div>
+          </li>
+          <?php endif ?>
+          <?php if(empty(isset($_SESSION['login']))) : ?>
+            <?php else: ?>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="iconlogin" src="img/registro.png" alt="" width="30" height="30">
+            </a>
+            <div class="dropdown-content">
+              <ul class="dropdown-menu">
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_filme.php'>Cadastrar filme</a></li>" ?>
               </ul>
             </div>
           </li>
