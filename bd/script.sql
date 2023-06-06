@@ -41,6 +41,7 @@ create or replace table musica(
 create or replace table filme(
     id int primary key auto_increment,
     titulo varchar(250) not null,
+    anime varchar(250) not null,
     diretor varchar(250) not null,
     duracao varchar(250) not null,
     categoria varchar(250) not null,
