@@ -17,7 +17,7 @@
 
     <div style="padding: 75px; margin: auto; width: 80%;">
     <div style="width: 100%; margin-left: 1.5%; margin-bottom: 5%">
-            <form id="formSearchTitulo" role="search" method="post" action="localiza-mangaAdmin.php">
+            <form id="formSearchTitulo" role="search" method="post" action="localiza-filmesAdmin.php">
                 <input style="width: 95%;" id="searchTitulo" class="form-control me-2" size="21" name="titulo" type="search" placeholder="Procurar" aria-label="Search">
             </form>
         </div>
