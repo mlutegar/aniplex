@@ -1,37 +1,51 @@
 <?php include('config.php');?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width ,initial-scale=1">
-    <script src="https://kit.fontawesome.com/7c9e86ad48.js" crossorigin="anonymous"></script>  
+    <script src="https://kit.fontawesome.com/7c9e86ad48.js" crossorigin="anonymous"></script>
     <title>Fale conosco</title>
     <link rel="stylesheet" href="css/message_us.css">
 </head>
 
-<body> 
+<body>
     <?php include("navbar.php")?>
 
     <div class="banner"></div>
 
-    <main>
-        <div id="form-rect">
+    <div class="cointainer m-5 p-5" style="background-color: #d4ebf7;">
+        <form method="post" action="sendMessageUsEmail.php">
+            <div>
+            <div class="row mb-3">
+                <h2>Fale Conosco</h2>
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" type="text" placeholder="Informe o seu nome" name="name" required>
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" placeholder="Informe o seu e-mail" name="email" required>
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Assunto</label>
+                <input class="form-control" type="text" placeholder="Informe o assunto" name="subject" required>
+            </div>
+            <div class="row mb-3">
+                <label class="form-label">Mensagem</label>
+                <textarea class="form-control" name="message" id="my-text"></textarea>
+            </div>
+            <div class="row mb-3">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+            </div>
+        </form>
 
-            <form method="post" action="sendMessageUsEmail.php">
-                <p style="font-size: 50px; margin-bottom: 20px;">Fale Conosco</p>
+    </div>
 
-                <label>Nome <br><input type="text" placeholder="Informe o seu nome" name="name" required></label>
-                <br>
-                <label>Email <br><input type="email" placeholder="Informe o seu e-mail" name="email" required></label>
-                <br>
-                <label>Assunto <br><input type="text" placeholder="Informe o assunto" name="subject" required></label>
-                <br>
-                <label>Mensagem <br><textarea name="message" style="height: 300px;" rows="4" cols="50" style="font-size: 12pt" id="my-text">Escreva sua mensagem</textarea></label>
-                <br>
-                <input class="submit-btn" type="submit" value="Enviar">
-            </form>
-        </div>
-    </main>
+    <?php include('footer.php') ?>
+</body>
 
-<?php include('footer.php') ?></body>
 </html>
