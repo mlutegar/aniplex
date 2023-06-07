@@ -5,11 +5,11 @@
 
     $anime = filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS);
     $nome_musica = filter_input(INPUT_POST, 'nome_musica', FILTER_SANITIZE_SPECIAL_CHARS);
-    $duracao = filter_input(INPUT_POST, 'duracao', FILTER_SANITIZE_NUMBER_INT);
+    $duracao = filter_input(INPUT_POST, 'duracao', FILTER_SANITIZE_SPECIAL_CHARS);
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
     $nota = filter_input(INPUT_POST, 'nota', FILTER_SANITIZE_NUMBER_INT);
 
-    $titulo = ("{$nome_musica} - Anime: {$anime} - Duração: {$duracao} Minutos");
+    $titulo = ("{$nome_musica}");
 
     $capa = converterBase64($_FILES['capa']);
     $conteudo = uploadArquivo($_FILES['conteudo']);

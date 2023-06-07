@@ -25,9 +25,9 @@
     <div id="form-rect">
         <div class="vitrine_linha">
             <div class="div2 detail_info" style="text-align: left;">
-                <p><strong>Nome da Musica:</strong><?= $musica->titulo ?></p><br><hr><br>
+                <p><strong>Nome da Musica: </strong><?= $musica->titulo ?></p><br><hr><br>
                 <p><strong>Anime:</strong> <?= $musica->anime ?></p><br><hr><br>
-                <p><strong>Duração:</strong> <?= $musica->duracao ?> Minutos</p><br><hr><br>
+                <p><strong>Duração:</strong> <?= $musica->duracao ?></p><br><hr><br>
                 <p><strong>Categoria:</strong> <?= $musica->categoria ?></p><br><hr><br>
                 <p><strong>Nota:</strong>  <?= $musica->nota ?></p>
                     <form action="atualiza_nota.php">

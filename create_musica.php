@@ -97,7 +97,7 @@
                       <div class="row">
                         <div class="col-md-6 mb-4">
                           <div class="form-outline">
-                            <input type="number" name="duracao" id="duracaoId" required
+                            <input type="text" name="duracao" id="duracaoId" required
                               class="form-control form-control-lg" />
                             <label class="form-label" for="form3Example1m1">Duração</label>
                           </div>

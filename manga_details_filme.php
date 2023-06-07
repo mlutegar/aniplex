@@ -26,9 +26,8 @@
         <div class="vitrine_linha">
             <div class="div2 detail_info" style="text-align: left;">
                 <p><strong>Nome do Filme: </strong><?= $filme->titulo ?></p><br><hr><br>
-                <p><strong>Filme:</strong> <?= $filme->anime ?></p><br><hr><br>
                 <p><strong>Diretor:</strong> <?= $filme->diretor ?></p><br><hr><br>
-                <p><strong>Duração:</strong> <?= $filme->duracao ?> Minutos</p><br><hr><br>
+                <p><strong>Duração:</strong> <?= $filme->duracao ?></p><br><hr><br>
                 <p><strong>Categoria:</strong> <?= $filme->categoria ?></p><br><hr><br>
                 <p style="overflow-wrap: break-word;"><strong>Sumario:</strong>  <?= $filme->sumario ?></p><br><hr><br>
                 <p><strong>Nota:</strong>  <?= $filme->nota ?></p>

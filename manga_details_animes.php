@@ -25,7 +25,7 @@
     <div id="form-rect">
         <div class="vitrine_linha">
             <div class="div2 detail_info" style="text-align: left;">
-                <p><strong>Nome do Anime:</strong><?= $anime->titulo ?></p><br><hr><br>
+                <p><strong>Nome do Anime: </strong><?= $anime->titulo ?></p><br><hr><br>
                 <p><strong>Anime:</strong> <?= $anime->anime ?></p><br><hr><br>
                 <p><strong>Episodios:</strong> <?= $anime->episodios ?></p><br><hr><br>
                 <p><strong>Temporadas:</strong> <?= $anime->temporadas ?></p><br><hr><br>

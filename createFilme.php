@@ -3,13 +3,13 @@
     require_once('util/base64.php');
 
     $anime =  filter_input(INPUT_POST, 'anime', FILTER_SANITIZE_SPECIAL_CHARS);
-    $duracao = filter_input(INPUT_POST, 'duracao', FILTER_SANITIZE_NUMBER_INT);
+    $duracao = filter_input(INPUT_POST, 'duracao', FILTER_SANITIZE_SPECIAL_CHARS);
     $diretor = filter_input(INPUT_POST, 'diretor', FILTER_SANITIZE_SPECIAL_CHARS);
     $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
     $nota = filter_input(INPUT_POST, 'nota', FILTER_SANITIZE_NUMBER_INT);
     $sumario = filter_input(INPUT_POST, 'sumario', FILTER_SANITIZE_SPECIAL_CHARS);
 
-    $titulo = ("{$anime} - Duração: {$duracao} Minutos");
+    $titulo = ("{$anime}");
 
     $capa = converterBase64($_FILES['capa']);
 

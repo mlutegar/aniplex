@@ -26,7 +26,6 @@
                 <tr>
                     <th>#</th>
                     <th>Titulo</th>
-                    <th>Anime</th>
                     <th>Diretor</th>
                     <th>Capa</th>
                     <th>Duração</th>
@@ -39,10 +38,9 @@
                     <tr>
                         <td><?= $manga->id ?></td>
                         <td><?= $manga->titulo ?></td>
-                        <td><?= $manga->anime ?></td>
                         <td><?= $manga->diretor ?></td>
                         <td><img style="  width: 100px; height: 100px; object-fit: cover; border: 4px solid black;" src="<?= $manga->capa ?>"></td>
-                        <td><?= $manga->duracao ?> Minutos</td>
+                        <td><?= $manga->duracao ?></td>
                         <td><?= $manga->created_at ?></td>
                         <td><a href="#" onclick="gerirManga(<?= $manga->id ?>, 'edit');">Editar</a></td>
                         <td><a style="color: red;" onclick="return confirm ('Deseja realmente excluir?') ? gerirManga(<?= $manga->id?>, 'del') : '';" href="#">Excluir</a></td>

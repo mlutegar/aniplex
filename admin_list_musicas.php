@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Titulo</th>
+                    <th>Nome da musica</th>
                     <th>Anime</th>
                     <th>Duração</th>
                     <th>Capa</th>
@@ -40,7 +40,7 @@
                         <td><?= $musica->id ?></td>
                         <td><?= $musica->titulo ?></td>
                         <td><?= $musica->anime ?></td>
-                        <td><?= $musica->duracao ?> Minutos</td>
+                        <td><?= $musica->duracao ?></td>
                         <td><img style="  width: 100px; height: 100px; object-fit: cover; border: 4px solid black;" src="<?= $musica->capa ?>"></td>
                         <td><a href="<?= $musica->conteudo ?>" download="">Baixar conteudo</a></td>
                         <td><?= $musica->created_at ?></td>
