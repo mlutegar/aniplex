@@ -58,7 +58,7 @@
                     . "<title>Recuperação de senha</title>"
                 . "</head>"
                 . "<body>"
-                    . "<h1>Recuperação de senha <strong>Super Mangá</strong></h1>"
+                    . "<h1>Recuperação de senha <strong>Aniplex</strong></h1>"
                     . "<div align='center'>"
                         . "<h3>Sua nova senha é: {$senha}</h3>"
                     . "</div>"
