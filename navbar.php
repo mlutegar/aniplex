@@ -36,7 +36,7 @@
             <div class="dropdown-content">
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="categorias.php">Mangas</a></li>
-                <li><a class="dropdown-item" href="#">Animes</a></li>
+                <li><a class="dropdown-item" href="categorias_animes.php">Animes</a></li>
                 <li><a class="dropdown-item" href="#">Músicas</a></li>
                 <li><a class="dropdown-item" href="categorias_filmes.php">Filmes</a></li>
               </ul>
@@ -61,6 +61,7 @@
                 <li><a class="dropdown-item" href="user.php">Página usuario</a></li>
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list.php'>Administrador Mangas</a></li>" ?>
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_filmes.php'>Administrador Filmes</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_animes.php'>Administrador Animes</a></li>" ?>
               </ul>
             </div>
           </li>
@@ -75,6 +76,7 @@
               <ul class="dropdown-menu">
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>" ?>
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_filme.php'>Cadastrar filme</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_anime.php'>Cadastrar anime</a></li>" ?>
               </ul>
             </div>
           </li>
