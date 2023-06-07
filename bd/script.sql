@@ -26,6 +26,21 @@ create or replace table manga(
     created_at TIMESTAMP not null default CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+create or replace table anime(
+    id int primary key auto_increment,
+    titulo varchar(250) not null,
+    anime varchar(250) not null,
+    episodios int not null,
+    temporadas int not null,
+    categoria varchar(250) not null,
+    sumario longtext not null,
+    capa longtext not null,
+    conteudo longtext,
+    nota int not null,
+    acesso int not null,
+    created_at TIMESTAMP not null default CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 create or replace table musica(
     id int primary key auto_increment,
     nome_musica varchar(250) not null,
