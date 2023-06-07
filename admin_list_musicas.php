@@ -1,8 +1,8 @@
 <?php
     include('configAdmin.php');
-    require_once('repository/AnimeRepository.php');
+    require_once('repository/MusicaRepository.php');
 
-    $titulo = filter_input(INPUT_GET, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome_musica = filter_input(INPUT_GET, 'nome_musica', FILTER_SANITIZE_SPECIAL_CHARS);
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +27,7 @@
                     <th>#</th>
                     <th>Titulo</th>
                     <th>Anime</th>
-                    <th>Episodios</th>
-                    <th>Temporadas</th>
+                    <th>Duração</th>
                     <th>Capa</th>
                     <th>Conteudo</th>
                     <th>Data cadastro</th>
@@ -36,18 +35,17 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach(fnLocalizaAnimePorTitulo($titulo) as $anime): ?>
+                <?php foreach(fnLocalizaMusicaPorTitulo($nome_musica) as $musica): ?>
                     <tr>
-                        <td><?= $anime->id ?></td>
-                        <td><?= $anime->titulo ?></td>
-                        <td><?= $anime->anime ?></td>
-                        <td><?= $anime->episodios ?></td>
-                        <td><?= $anime->temporadas ?> Temporadas</td>
-                        <td><img style="  width: 100px; height: 100px; object-fit: cover; border: 4px solid black;" src="<?= $anime->capa ?>"></td>
-                        <td><a href="<?= $anime->conteudo ?>" download="">Baixar conteudo</a></td>
-                        <td><?= $anime->created_at ?></td>
-                        <td><a href="#" onclick="gerirManga(<?= $anime->id ?>, 'edit');">Editar</a></td>
-                        <td><a style="color: red;" onclick="return confirm ('Deseja realmente excluir?') ? gerirManga(<?= $anime->id?>, 'del') : '';" href="#">Excluir</a></td>
+                        <td><?= $musica->id ?></td>
+                        <td><?= $musica->titulo ?></td>
+                        <td><?= $musica->anime ?></td>
+                        <td><?= $musica->duracao ?> Minutos</td>
+                        <td><img style="  width: 100px; height: 100px; object-fit: cover; border: 4px solid black;" src="<?= $musica->capa ?>"></td>
+                        <td><a href="<?= $musica->conteudo ?>" download="">Baixar conteudo</a></td>
+                        <td><?= $musica->created_at ?></td>
+                        <td><a href="#" onclick="gerirManga(<?= $musica->id ?>, 'edit');">Editar</a></td>
+                        <td><a style="color: red;" onclick="return confirm ('Deseja realmente excluir?') ? gerirManga(<?= $musica->id?>, 'del') : '';" href="#">Excluir</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -82,9 +80,9 @@
 
             post({data : id});
 
-            url = 'excluirAnime.php';
+            url = 'excluirMusica.php';
             if(action === 'edit')
-                url = 'formulario-edita-anime.php';
+                url = 'formulario-edita-musica.php';
 
             window.location.href = url;
         }
