@@ -67,21 +67,28 @@
             </div>
           </li>
           <?php endif ?>
-          <?php if(empty(isset($_SESSION['login']))) : ?>
-            <?php else: ?>
+
+          <?php
+          if(isset($_SESSION['login'])) :
+          if($_SESSION['login']->id == 1) :
+          ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="iconlogin" src="img/registro.png" alt="" width="30" height="30">
             </a>
             <div class="dropdown-content">
               <ul class="dropdown-menu">
-                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>" ?>
-                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_filme.php'>Cadastrar filme</a></li>" ?>
-                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='create_anime.php'>Cadastrar anime</a></li>" ?>
+                <li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>
+                <li><a class='dropdown-item' href='create_filme.php'>Cadastrar filme</a></li>
+                <li><a class='dropdown-item' href='create_anime.php'>Cadastrar anime</a></li>
+                <li><a class='dropdown-item' href='create_anime.php'>Cadastrar música</a></li>
               </ul>
             </div>
           </li>
-          <?php endif ?>
+          <?php
+          endif;
+          endif;
+          ?>
         </ul>
         <form id="formSearchTitulo" class="d-flex" role="search" method="post" action="mangaLocalize.php">
           <input class="form-control me-2" type="search" id="searchTitulo" name="titulo" placeholder="Faça sua pesquisa"
