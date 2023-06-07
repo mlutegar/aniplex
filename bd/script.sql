@@ -44,8 +44,10 @@ create or replace table anime(
 create or replace table musica(
     id int primary key auto_increment,
     nome_musica varchar(250) not null,
+    titulo varchar(250) not null,
     anime varchar(250) not null,
     duracao varchar(250) not null,
+    categoria varchar(250) not null,
     capa longtext not null,
     conteudo longtext,
     nota int not null,

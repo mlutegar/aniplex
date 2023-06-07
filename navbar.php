@@ -81,7 +81,7 @@
                 <li><a class='dropdown-item' href='create_manga.php'>Cadastrar manga</a></li>
                 <li><a class='dropdown-item' href='create_filme.php'>Cadastrar filme</a></li>
                 <li><a class='dropdown-item' href='create_anime.php'>Cadastrar anime</a></li>
-                <li><a class='dropdown-item' href='create_anime.php'>Cadastrar música</a></li>
+                <li><a class='dropdown-item' href='create_musica.php'>Cadastrar música</a></li>
               </ul>
             </div>
           </li>
