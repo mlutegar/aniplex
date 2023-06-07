@@ -1,4 +1,4 @@
-<?php 
+<?php
     include('configAdmin.php');
     require_once('repository/MangaRepository.php');
 
@@ -21,7 +21,7 @@
                 <input style="width: 95%;" id="searchTitulo" class="form-control me-2" size="21" name="titulo" type="search" placeholder="Procurar" aria-label="Search">
             </form>
         </div>
-        <table width=100%>
+        <table class="table table-striped" width=100%>
             <thead>
                 <tr>
                     <th>#</th>
@@ -59,7 +59,7 @@
             </tr>
         </tfoot>
     <?php endif; ?>
-    
+
 </body> <?php include("footer.php"); ?>
 <script>
         window.post = (data) => {
@@ -77,13 +77,13 @@
         }
 
         function gerirManga(id, action) {
-            
+
             post({data : id});
 
             url = 'excluirManga.php';
             if(action === 'edit')
                 url = 'formulario-edita-manga.php';
-                
+
             window.location.href = url;
         }
     </script>

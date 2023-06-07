@@ -14,7 +14,7 @@
 <header>
 
   <nav class="navbar navbar-expand-lg" style="background-color: #d1ebf7;">
-    <div class="container-fluid">
+    <div class="container-fluid mx-5">
       <a class="navbar-brand" href="index.php"><img width="100" height="104" class="d-inline-block align-text-top"
           src="img/aniplex logo.png" alt="logo"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -37,7 +37,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="categorias.php">Mangas</a></li>
                 <li><a class="dropdown-item" href="categorias_animes.php">Animes</a></li>
-                <li><a class="dropdown-item" href="#">Músicas</a></li>
+                <li><a class="dropdown-item" href="categorias_musicas.php">Músicas</a></li>
                 <li><a class="dropdown-item" href="categorias_filmes.php">Filmes</a></li>
               </ul>
             </div>
@@ -62,6 +62,7 @@
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list.php'>Administrador Mangas</a></li>" ?>
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_filmes.php'>Administrador Filmes</a></li>" ?>
                 <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_animes.php'>Administrador Animes</a></li>" ?>
+                <?php if($_SESSION['login']->id == 1 && isset($_SESSION['login'])) echo  "<li><a class='dropdown-item' href='admin_list_musicas.php'>Administrador Musicas</a></li>" ?>
               </ul>
             </div>
           </li>
