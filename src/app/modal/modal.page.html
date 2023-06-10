@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="animes">
+    <ion-item>
+      <ion-label position="stacked">Nome</ion-label>
+      <ion-input [(ngModel)]="animes.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Anime</ion-label>
+      <ion-input [(ngModel)]="animes.genero"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Duraçao (min)</ion-label>
+      <ion-input [(ngModel)]="animes.episodes"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Acessos</ion-label>
+      <ion-input [(ngModel)]="animes.lancamento"></ion-input>
+    </ion-item>
+  </div>
+
+    <ion-button expand="block" color="success" (click)="updateAnime()">
+      <ion-icon name="save" slot="start"></ion-icon>
+      Atualizar
+    </ion-button>
+
+    <ion-button expand="block" color="danger" (click)="deleteAnime()">
+      <ion-icon name="trash" slot="start"></ion-icon>
+      Deletar
+    </ion-button>
+</ion-content>

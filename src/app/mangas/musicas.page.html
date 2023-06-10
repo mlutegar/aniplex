@@ -1,0 +1,50 @@
+<ion-header class="custom-header">
+  <ion-toolbar class="custom-header">
+    <ion-row class="ion-align-items-center">
+      <ion-col offset="1">
+        <img src="../../assets/img/aniplex logo.png" height="50">
+      </ion-col>
+      <ion-col pull="1">
+        <h3 style="color: black">Mangas</h3>
+      </ion-col>
+      <ion-buttons>
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content-background">
+  <ion-row>
+    <ion-card>
+      <img alt="Silhouette of mountains" src="../../assets/img/wallpapper.jpg" />
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <ion-searchbar></ion-searchbar>
+  </ion-row>
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let anime of animes" (click)="openAnime(anime)">
+      <ion-card>
+        <ion-card-title>{{anime.nome}}</ion-card-title>
+        <ion-item class="no-padding">
+          <ion-label>
+            <h2>Anime: {{anime.genero}}</h2>
+            <h2>Duraçao: {{anime.episodes}} min</h2>
+            <h2>Acessos: {{anime.lancamento}}</h2>
+          </ion-label>
+        </ion-item>
+     </ion-card>
+  </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addAnime()">
+      <ion-icon name="add" color="light"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

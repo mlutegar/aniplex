@@ -1,0 +1,28 @@
+<ion-tabs class="custom-b1">
+  <ion-tab-bar class="custom-b1" slot="bottom" *ngIf="(currentPage == '/musicas' || currentPage == '/home' || currentPage == '/animes' || currentPage == '/mangas' || currentPage == '/jogos')">
+    <ion-tab-button tab="home">
+      <ion-icon aria-hidden="true" name="home-outline"></ion-icon>
+      <ion-label>Página Inicial</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="mangas">
+      <ion-icon aria-hidden="true" name="book-outline"></ion-icon>
+      <ion-label>Mangas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="animes">
+      <ion-icon aria-hidden="true" name="videocam-outline"></ion-icon>
+      <ion-label>Animes</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="jogos">
+      <ion-icon aria-hidden="true" name="game-controller-outline"></ion-icon>
+      <ion-label>Jogos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="musicas">
+      <ion-icon aria-hidden="true" name="musical-notes-outline"></ion-icon>
+      <ion-label>Musicas</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

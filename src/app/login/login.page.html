@@ -1,0 +1,29 @@
+<ion-header class="custom-header">
+	<ion-toolbar class="custom-header">
+	  <ion-row class="ion-align-self-center">
+		<ion-col offset="1">
+		  <img src="../../assets/img/aniplex logo.png" height="50">
+		</ion-col>
+	  </ion-row>
+	</ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding custom-content-background">
+	<form (ngSubmit)="login()" [formGroup]="credentials">
+		<ion-item fill="solid" class="ion-margin-bottom">
+			<ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+			<ion-note slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors"
+				>Email is invalid</ion-note
+			>
+		</ion-item>
+		<ion-item fill="solid" class="ion-margin-bottom">
+			<ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+			<ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors"
+				>Password needs to be 6 characters</ion-note
+			>
+		</ion-item>
+
+		<ion-button type="submit" expand="block" [disabled]="!credentials.valid">Logar</ion-button>
+		<ion-button type="button" expand="block" color="secondary" (click)="register()">Criar conta</ion-button>
+	</form>
+</ion-content>

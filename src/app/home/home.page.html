@@ -1,0 +1,57 @@
+<ion-header class="custom-header">
+  <ion-toolbar class="custom-header">
+    <ion-row class="ion-align-items-center">
+      <ion-col offset="1">
+        <img
+          src="../../assets/img/aniplex logo.png"
+          height="50"
+        >
+      </ion-col>
+      <ion-col pull="1">
+        <h3 style="color: black">Home</h3>
+      </ion-col>
+      <ion-buttons>
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-row>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content-background" [fullscreen]="true">
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="../../assets/img/wallpapper.jpg" />
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-searchbar></ion-searchbar>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img lenght="100%" alt="Silhouette of mountains"
+            src="https://nerdhits.com.br/wp-content/uploads/2022/09/ANIMES-MAIS-CAROS.jpg" />
+          <ion-card-header>
+            <ion-card-title>O que somos!</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Aqui, no Aniplex, mergulhamos profundamente nesse universo melódico, trazendo-lhe o melhor em trilhas sonoras
+            de animes que irão transportá-lo para aventuras épicas, romances ardentes e batalhas intensas.
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3></h3>
+        <p></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
